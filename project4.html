@@ -1,147 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <style>
-        /* Your inline CSS styles go here */
-    </style>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <style>
+    /* Your inline CSS styles go here */
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </head>
+
 <body>
   <header>
     <div class="topnav">
-    <ul>
-      <li><a href="index.html">Victoria Popova</a></li>
-      <li><a href="sideprojects.html">Side projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html" >Resume</a></li>
-      <li><a href="index.html" id="home" >Projects</a></li>
-     
-
-  </ul>
-</div>
-</header>
-  
-
-<section class="parallax-container">
-
-  <h1> Pawse </h1>
-  <h2>A Web Browser Extension for Awareness of Online User Privacy </h2>
-</section>
-
-<section class="buffer"></section>
-
-<section class="parallax-container parallax-container2">
-  
-  <div class="container">
-    <div class="containerTest">
-<h3>Case Study Overview 
-</h3>
-<p>This case study explores the issue of online privacy and how often users are unaware of the amount of data that is collected about them all the time. The goal of this case study was to design a solution that raises awareness for users' online presence and facilitates making changes based on user preferences. To achieve this goal, a web browser extension Pawse was designed to help users be in control of their information.
-</p>
-
-<h3>My Role and Used Tools
-</h3>
+      <ul>
+        <li><a href="index.html">Victoria Popova</a></li>
+        <li><a href="sideprojects.html">Side projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="index.html" id="home">Projects</a></li>
 
 
-  <ul class="NAVtest">
-    <li>Role: UX Researcher</li> 
- 
-  <li>Tools: Miro, Figma</li>
-  </ul>
-
-
-<h3>Challenges/Problem Statement 
-</h3>
-<p>Privacy policies for different applications are often too textual and time-consuming to read, and due to the overwhelming amount of text, users tend to blindly accept terms and conditions, cookies and other disclaimers on different applications. This increases the risk of their private information being collected, further amplifying their digital footprint that users may not be aware of. 
-</p>
-<h3>Goals</h3>
-<p>To aid users in providing transparency about their online presence, the goal for this case study is to develop an extension that:
-</p>
-<ul class="NAVtest"><li>Keeps the user aware and in control of the data they generate and provide about themselves.
-</li>
-<li>Makes reading policies more digestible for users to understand what they are consenting to online.</li>
-<li>Is intuitive and easily accessible when you browse.
-</li></ul>
-
-<h3>Research/Analysis 
-</h3>
-<p>Since online privacy and awareness is a huge topic with different areas of interest, it was essential to understand the problem space better. To begin with, it was of interest to research the current state of the topic, including current research, user/consumer point of view and current existing products tackling the same problem as stated before.
-</p>
-<h3>Users POV
-</h3>
-<p>Before designing a solution for users, it made sense to ask users themselves what they value and what they want when it comes to their online presence. Therefore we created a questionnaire to better understand users’ habits online, what information they find important, what they were not aware of etc. 
-</p>
-<p>9 participants partook in the questionnaire, the majority of whom were women between 18-25 years old. The results were summarized into smaller bullet points where the most interesting insights were: 
-</p>
-
-<ul class="NAVtest"><li>Most of the responders have never read a privacy policy in full before agreeing to it.
-</li>
-<li>All of the participants were aware of online tracking.
-</li>
-<li>Most of the responders think that personal data is just personal and should not be used for any purpose. However, another significant group thinks that data could be used for research purposes or by employers.
-</li>
-<li>Most of the participants think that their data could be subject to breach.
-</li>
-<li>Users wish for more control over data, easy to delete, and stricter regulations on social media platforms.
-</li>
-<li>Social media platforms should offer more user-friendly support and online information to help users manage their online identity. Schools and friends can also be great resources for learning how to manage one’s online presence.
-</li>
-</ul>
-
-<p>Given these answers and some affinity mapping, the main challenge is to create a solution that enables users to easily view their data and access permissions, while also providing them with greater control over their online identity and making information more digestible.
-</p>
-
-<h3>Competitor analysis
-</h3>
-
-<p>Before we started designing our extension, we first did a deep dive and analysed similar tools to understand what is already on the market, the good, the bad and the potential areas of improvement of each application. As a summary, we looked at the following extensions: </p>
-
-<ul class="NAVtest">
-  <li><strong>EditThisCookie:</strong> A popular cookie extension, that does its job providing what sites have which cookies but the UI looks awful.</li>
-  <li><strong>HTTPS Everywhere:</strong> Automatically uses HTTPS security on many sites.</li>
-  <li><strong>Privacy badger:</strong> Sees and blockers potential trackers on different websites, UI could be better.</li>
-  <li><strong>Click&Clean:</strong> Deletes typed URLs. Cache, Cookies, your Download and Browsing history just with a 1-click button, however, does not add to the solution of online privacy awareness.</li>
-</ul>
-
-<p>The main takeaway from this analysis was that there are several browser extensions available, but none of them have all the functionalities in one while being intuitive and aesthetically pleasing. It was then set to suggest designing a coherent extension that has several functionalities in one extension (rather than needing to have an extension for each) and is intuitive to use without compromising its appearance. It is also important to keep in mind that a lot of these extensions included words/functionalities that may be not so straightforward to not-so-tech-savvy people (like HTTPS and trackers), creating a risk of lacking an understandable language for all users
-</p>
-
-<h3>Eliciting ideas and designing the prototype 
-</h3>
-<p>Together with the previous research we (a team consisting of 3 designers) continued on a brainstorming exercise journey and decided to do the Crazy Eights. Here each designer had 1 minute to sketch different ideas of some functionalities that the extension would have. Here several ideas popped up such as having a 3D avatar of your “known” to the internet persona, surveillance alerts to make users more aware of possible trackers, or a more provocative visualization of a home where the bricks are the 3rd parties that have access to your information. 
-</p>
-<p>After this brainstorming exercise, one thing that felt flat was how we interact with the extension, would it be through the extension bar? Just an icon on the side? It felt as if there was no room for other interactions or easy access to information. By that, I proposed to have an avatar in the shape of a bear to accompany the user on their web browser. The bear would be able to provide different overviews for users of all cookies and how much other websites or applications know about them online. 
-</p>
-
-<h3>The Extension Design for Digital Footprint
-</h3>
-<p>*Note that I did not participate in the hi-fi creation of the prototype, only the lo-fi as well as all the research done before.
-</p>
-<p>In this design stage, we continued to further develop the privacy browser extension idea containing a bear. We named the extension “Pawse” as it is something that bears have (paws) and something that the extension is capable of doing (pause and make aware). The main functionalities of this extension are that it provides users with a holistic overview of cookies and how websites and applications collect their data. The extension uses a brown bear avatar as a gamification element to make privacy awareness and education more engaging and easier to digest. It also breaks down privacy policies into shorter and easy-to-understand terms, giving users more control over their data and what they are about to sign up for. This extension is intended to be used on different web browsers, both on mobile and computer devices. After some design iterations, we finalized the prototype by creating an MVP.
-</p>
-<h3>Conclusion and further developments
-</h3>
-<p>We created the extension Pawse to address the common issue of users mindlessly accepting all cookies and other policies without understanding their implications. Our research for this case study showed that users wanted more transparency and control over who gets access to their data and when. The existing cookie management tools were not intuitive enough and often failed to effectively inform users about their privacy. By creating Pawse we give users more agency to make informed decisions about their online data. Given the state of the MVP, the next steps in this process would be to do some more iterations of user testing on the functionalities of the prototype, further shaping the product to adhere to user needs.
-</p>
+      </ul>
     </div>
-  
-</div>
-  
-</section>
-
-<section class="buffer"></section>
+  </header>
 
 
+  <section class="parallax-container">
 
-<footer>
-  <div class="footer-text">Copyright © 2023, Victoria Popova. All Rights Reserved.</div> 
-</footer>
+    <h1> Pawse </h1>
+    <h2>A Web Browser Extension for Awareness of Online User Privacy </h2>
+  </section>
+
+  <section class="buffer"></section>
+
+  <section class="parallax-container parallax-container2">
+
+    <div class="container">
+      <div class="containerTest">
+        <h3>Case Study Overview
+        </h3>
+        <p>This case study explores the issue of online privacy and how often users are unaware of the amount of data
+          that is collected about them all the time. The goal of this case study was to design a solution that raises
+          awareness for users' online presence and facilitates making changes based on user preferences. To achieve this
+          goal, a web browser extension Pawse was designed to help users be in control of their information.
+        </p>
+
+        <h3>My Role and Used Tools
+        </h3>
+
+
+        <ul class="NAVtest">
+          <li>Role: UX Researcher</li>
+
+          <li>Tools: Miro, Figma</li>
+        </ul>
+
+
+        <h3>Challenges/Problem Statement
+        </h3>
+        <p>Privacy policies for different applications are often too textual and time-consuming to read, and due to the
+          overwhelming amount of text, users tend to blindly accept terms and conditions, cookies and other disclaimers
+          on different applications. This increases the risk of their private information being collected, further
+          amplifying their digital footprint that users may not be aware of.
+        </p>
+        <h3>Goals</h3>
+        <p>To aid users in providing transparency about their online presence, the goal for this case study is to
+          develop an extension that:
+        </p>
+        <ul class="NAVtest">
+          <li>Keeps the user aware and in control of the data they generate and provide about themselves.
+          </li>
+          <li>Makes reading policies more digestible for users to understand what they are consenting to online.</li>
+          <li>Is intuitive and easily accessible when you browse.
+          </li>
+        </ul>
+
+        <h3>Research/Analysis
+        </h3>
+        <p>Since online privacy and awareness is a huge topic with different areas of interest, it was essential to
+          understand the problem space better. To begin with, it was of interest to research the current state of the
+          topic, including current research, user/consumer point of view and current existing products tackling the same
+          problem as stated before.
+        </p>
+        <h3>Users POV
+        </h3>
+        <p>Before designing a solution for users, it made sense to ask users themselves what they value and what they
+          want when it comes to their online presence. Therefore we created a questionnaire to better understand users’
+          habits online, what information they find important, what they were not aware of etc.
+        </p>
+        <p>9 participants partook in the questionnaire, the majority of whom were women between 18-25 years old. The
+          results were summarized into smaller bullet points where the most interesting insights were:
+        </p>
+
+        <ul class="NAVtest">
+          <li>Most of the responders have never read a privacy policy in full before agreeing to it.
+          </li>
+          <li>All of the participants were aware of online tracking.
+          </li>
+          <li>Most of the responders think that personal data is just personal and should not be used for any purpose.
+            However, another significant group thinks that data could be used for research purposes or by employers.
+          </li>
+          <li>Most of the participants think that their data could be subject to breach.
+          </li>
+          <li>Users wish for more control over data, easy to delete, and stricter regulations on social media platforms.
+          </li>
+          <li>Social media platforms should offer more user-friendly support and online information to help users manage
+            their online identity. Schools and friends can also be great resources for learning how to manage one’s
+            online presence.
+          </li>
+        </ul>
+
+        <p>Given these answers and some affinity mapping, the main challenge is to create a solution that enables users
+          to easily view their data and access permissions, while also providing them with greater control over their
+          online identity and making information more digestible.
+        </p>
+
+        <h3>Competitor analysis
+        </h3>
+
+        <p>Before we started designing our extension, we first did a deep dive and analysed similar tools to understand
+          what is already on the market, the good, the bad and the potential areas of improvement of each application.
+          As a summary, we looked at the following extensions: </p>
+
+        <ul class="NAVtest">
+          <li><strong>EditThisCookie:</strong> A popular cookie extension, that does its job providing what sites have
+            which cookies but the UI looks awful.</li>
+          <li><strong>HTTPS Everywhere:</strong> Automatically uses HTTPS security on many sites.</li>
+          <li><strong>Privacy badger:</strong> Sees and blockers potential trackers on different websites, UI could be
+            better.</li>
+          <li><strong>Click&Clean:</strong> Deletes typed URLs. Cache, Cookies, your Download and Browsing history just
+            with a 1-click button, however, does not add to the solution of online privacy awareness.</li>
+        </ul>
+
+        <p>The main takeaway from this analysis was that there are several browser extensions available, but none of
+          them have all the functionalities in one while being intuitive and aesthetically pleasing. It was then set to
+          suggest designing a coherent extension that has several functionalities in one extension (rather than needing
+          to have an extension for each) and is intuitive to use without compromising its appearance. It is also
+          important to keep in mind that a lot of these extensions included words/functionalities that may be not so
+          straightforward to not-so-tech-savvy people (like HTTPS and trackers), creating a risk of lacking an
+          understandable language for all users
+        </p>
+
+        <h3>Eliciting ideas and designing the prototype
+        </h3>
+        <p>Together with the previous research we (a team consisting of 3 designers) continued on a brainstorming
+          exercise journey and decided to do the Crazy Eights. Here each designer had 1 minute to sketch different ideas
+          of some functionalities that the extension would have. Here several ideas popped up such as having a 3D avatar
+          of your “known” to the internet persona, surveillance alerts to make users more aware of possible trackers, or
+          a more provocative visualization of a home where the bricks are the 3rd parties that have access to your
+          information.
+        </p>
+        <p>After this brainstorming exercise, one thing that felt flat was how we interact with the extension, would it
+          be through the extension bar? Just an icon on the side? It felt as if there was no room for other interactions
+          or easy access to information. By that, I proposed to have an avatar in the shape of a bear to accompany the
+          user on their web browser. The bear would be able to provide different overviews for users of all cookies and
+          how much other websites or applications know about them online.
+        </p>
+
+        <h3>The Extension Design for Digital Footprint
+        </h3>
+        <p>*Note that I did not participate in the hi-fi creation of the prototype, only the lo-fi as well as all the
+          research done before.
+        </p>
+        <p>In this design stage, we continued to further develop the privacy browser extension idea containing a bear.
+          We named the extension “Pawse” as it is something that bears have (paws) and something that the extension is
+          capable of doing (pause and make aware). The main functionalities of this extension are that it provides users
+          with a holistic overview of cookies and how websites and applications collect their data. The extension uses a
+          brown bear avatar as a gamification element to make privacy awareness and education more engaging and easier
+          to digest. It also breaks down privacy policies into shorter and easy-to-understand terms, giving users more
+          control over their data and what they are about to sign up for. This extension is intended to be used on
+          different web browsers, both on mobile and computer devices. After some design iterations, we finalized the
+          prototype by creating an MVP.
+        </p>
+        <h3>Conclusion and further developments
+        </h3>
+        <p>We created the extension Pawse to address the common issue of users mindlessly accepting all cookies and
+          other policies without understanding their implications. Our research for this case study showed that users
+          wanted more transparency and control over who gets access to their data and when. The existing cookie
+          management tools were not intuitive enough and often failed to effectively inform users about their privacy.
+          By creating Pawse we give users more agency to make informed decisions about their online data. Given the
+          state of the MVP, the next steps in this process would be to do some more iterations of user testing on the
+          functionalities of the prototype, further shaping the product to adhere to user needs.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="buffer"></section>
+
+
+
+  <footer>
+    <div class="footer-text">Copyright © 2023, Victoria Popova. All Rights Reserved.</div>
+  </footer>
 
 </body>
+
 </html>
