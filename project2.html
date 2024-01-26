@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Your inline CSS styles go here */
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+  <header>
+    <div class="topnav">
+    <ul>
+      <li><a href="index.html">Victoria Popova</a></li>
+      <li><a href="sideprojects.html">Side projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html" >Resume</a></li>
+      <li><a href="index.html" id="home" >Projects</a></li>
+     
+
+  </ul>
+</div>
+</header>
+  
+
+<section class="parallax-container">
+
+  <h1> Northvolt Identity Page System</h1>
+  <h2> A UX Case Study</h2>
+</section>
+
+<section class="buffer"></section>
+
+<section class="parallax-container parallax-container2">
+  
+  <div class="container">
+    <div class="containerTest">
+
+<h3>Overview</h3>
+<p>The leading company in the energy storage industry Northvolt set a design challenge to create a unified home for their product information across company-wide production lines. They wanted to develop a single identity page that communicated their cell’s process status and quality data.
+</p>
+<h3>My Role and Used Tools
+</h3>
+
+  <ul class="NAVtest">
+    <li>Role: UX Researcher</li>
+ 
+ <li>Tools: Miro, Figma</li>
+  </ul>
+
+
+<h3>Challenges and Problem Statement
+</h3>
+<p>In the scope of Industry 4.0, production processes have become more reliant on interoperability and seamless interactions between smart systems and human operators. While this enhances traceability and quality control, it also generates a significant amount of data, which in turn creates the need for systems that efficiently structure diverse data categories.
+</p>
+<h3>Goals</h3>
+<p>The primary objectives for the Northvolt Identity Page were to Build an identity page for Northvolt products that:
+</p>
+<ul class="NAVtest">
+  <li>Improves readability by enhancing the presentation of process data.</li>
+  <li>Creates a robust information architecture, organising content into categories.</li>
+  <li>It has a Single-Page Responsive Interface that displays the cell’s life cycle seamlessly across both web and mobile applications.</li>
+</ul>
+
+
+<h3>Research and Analysis
+</h3>
+<p>Firstly, understanding the users and their needs is crucial. information about the user groups was provided by the company and consists of the following three: 
+</p>
+<ul class="NAVtest">
+<li><b>Operators:</b>Operators require a concise overview of the processes associated with a specific cell. They need to quickly assess the current state and any recent events.
+</li>
+<li><b>Quality Technicians/Managers:</b>Specialists in quality control need access to detailed information about any problems encountered during the cell’s life cycle.
+
+</li>
+<li><b>Process Engineers:</b>Has responsibilities involving improving processes and preventing future issues. They need tools to compare cells and identify areas for enhancement.
+</li>
+
+
+</ul>
+
+<p>Secondly, the identity page must seamlessly integrate current status, past events, and future (all have temporal qualities) predictions related to the cell. To facilitate this without the interface becoming too cluttered with information, there was a need for robust filtering functionality that would allow users to focus on specific time ranges and categories. 
+</p>
+
+<p>Lastly, there was an open question about whether the identity page could be used to compare cells with other cells. During the research, attention was drawn to the responsibilities of Process Engineers. These users need to inspect cells to find ways to improve processes and avoid problems in the future and for that reason, a part of the solution had to focus on process comparison to address this question.
+</p>
+
+<h3>Dashboard Audit and Information Architecture
+</h3>
+
+<img src="n1.png">
+<p>While the identity page had relevant sections for process data categories, the current layout did not utilize the given space efficiently, making some placements such as navigation to the timeline and genealogy not intuitive enough. The timeline lacked accessible navigation between stages and error-handling feedback, making it harder for users to track down and solve errors efficiently. 
+</p>
+<img src="n2.png">
+
+<p>Based on these findings, it was important to structure the categories in an intuitive and accessible way. To better understand the structure and how categories relate to one another, I created an information architecture of the application’s contents.
+</p>
+
+<h3>Lo-fi Prototype
+</h3>
+<img src="n3.png">
+
+<p>To address the workers’ different needs, I decided to utilize the space at the top right corner by moving the menu and filters for important inspections there. This facilitated users’ needs as they have different tasks and areas of expertise. To make the production progress clearer, a timeline was added at the top to help users directly see (and navigate) what step the cell currently is in, the upcoming step and possible found errors.
+</p>
+
+<h3>Style Guide
+</h3>
+<p>To increase readability and make errors easier to locate on the screen, recognizable icons and colours were chosen for error handling. I also added several warning symbols to signify the severity of errors in specific process steps.<img src="n4.png">
+
+</p>
+<h3>Interface Design - Desktop
+</h3>
+<img src="n5.png">
+
+<h4>Cell Overview
+</h4>
+<p>On the identity page, a card was added with the main information for the cell overview. This overview is needed for all user groups to determine the category of the cell. <img src="n6.png">
+
+</p>
+<h4>Timeline</h4>
+<p>The timeline shows information about the current status, future, and past of the cell. All passed steps are marked with either a completed icon or an error. In case of an error, the user can check the error log.
+</p><img src="n7.png">
+
+<h4>Inspection</h4>
+<img src="n8.png">
+
+<p>Inspections are part of the interface that users can use to customize the view. Depending on their needs, users can view errors, genealogy, process checks, quality of the cell, and timeline. For example, the Error card shows what went wrong during a passed stage and could be used by a process engineer without the need to go through the timeline. A process check is needed to compare the production of one cell to others to identify problems in production.
+</p>
+
+<h3>Interface Design - Mobile
+</h3>
+<img src="n9.png">
+
+<h4>Interface Design Overview
+</h4>
+<p>Since users can customize the view of the application with Inspection settings, the order of the cards (Errors, Timeline, Process check, etc.) could be different.
+</p>
+<h3>Conclusion/Reflection
+</h3>
+<p>The premise of this case study was to provide a web and mobile interface design for keeping track of the production processes of cells at Northvolt. This resulted in the current prototype, where the focus is on understanding, categorising, and structuring different data streams in an intuitive and accessible way for different types of users at the company. All this without compromising the application’s readability.
+</p>
+<p>The next step in this design process could be to continue with usability testing based on application interactions. This could be done through a task-based test, where participants (in this case, workers at Northvolt) would be asked to complete a set of tasks and think aloud, while the facilitator (researcher) would observe their interactions. The test could therefore be concluded with an interview, highlighting the participant’s feedback towards the new design.
+</p>
+<p>An alternative way of user testing would be to design a workshop where participants gather to discuss the system and possible system improvements.
+</p>
+    
+    
+    
+    
+    
+    </div>
+
+</section>
+
+<section class="buffer"></section>
+
+
+
+<footer>
+  <div class="footer-text">Copyright © 2023, Victoria Popova. All Rights Reserved.</div> 
+</footer>
+
+</body>
+</html>

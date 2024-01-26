@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <style>
-        /* Your inline CSS styles go here */
-    </style>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <style>
+    /* Your inline CSS styles go here */
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
+
 <body>
   <header>
-    <ul>
-      <li><a href="index.html" id="home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-  </ul>
-</header>
+    <div class="topnav">
+      <ul>
+        <li id="name"><a href="index.html">Victoria Popova</a></li>
+        <li><a href="sideprojects.html" >Side projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="index.html" id="home">Projects</a></li>
+
+
+      </ul>
+    </div>
+  </header>
+
+
+  <section class="parallax-container">
+
+    <h1 id="header"> Victoria Popova</h1>
+    <p>
+      UX Designer
+    </p>
   
 
-<section class="parallax-container">
+  </section>
 
-  <h1> Torre</h1>
-  <p>
-    Cerro Torre is a mountain of sheer beauty whose spectacular attributes
-    make it an unique gem in Argentina.
-  </p>
-</section>
+  <section class="buffer"></section>
+  <section class="parallax-container parallax-container2">
 
-<section class="buffer"></section>
+    <div class="container">
 
-<section class="parallax-container parallax-container2">
-  
-  <div class="card">
-    <div class="card-img"></div>
-    <h3>Hiking</h3>
-    <p>
-      Explore the myriad of trails through the mountaineous. Choose the
-      difficulty appropriate to your fitness level.
-    </p>
-    <a href="#">Learn more</a>
-  </div>
-  <div class="card">
-    <div class="card-img"></div>
-    <a href="#about">climbing</a>
-    <h3>Rock climbing</h3>
-    <p>
-      The goal is to reach the summit of a formation or the endpoint of a
-      usually pre-defined route without falling
-    </p>
-    <a href="#">Learn more</a>
-  </div>
-  <div class="card">
-    <div class="card-img"></div>
-    <h3>Caving</h3>
       
-  <img src="cat.jpg" alt="LA" style="width:20%;">
-  <img src="cat2.jpg" alt="LA" style="width:20%;">
-  <img src="cat3.jpg" alt="LA" style="width:20%;">
-  <div class="content">
-      <h1>This is a CAT</h1>
-      <p>This is a paragraph.</p>
-      <p>This is another paragraph.</p>
-  </div>
-    <p>
-      Exploring underground through networks of tunnels and passageways,
-      which can be natural or artificial.
-    </p>
-    <a href="#">Learn more</a>
-  </div>
-  <div class="card">
-    <div class="card-img"></div>
-    <h3>Paragliding</h3>
-    <p>
-      Get lift off from the mountain and enjoy through the splendor of the
-      surrounding landscape by parachute.
-    </p>
-    <a href="#">Learn more</a>
-  </div>
-
-  <a href="#about" class="card">
-    <div class="card-img"></div>
-    <h3>Rock climbing</h3>
-    <p>
-        The goal is to reach the summit of a formation or the endpoint of a
-        usually pre-defined route without falling.
-    </p>
-    <a href="#">Learn more</a>
-</a>
-
-</section>
-
-<section class="buffer"></section>
+      
+      
+      
+      <div class="card" onclick="location.href='project1.html';" style="cursor: pointer;">
+        <div class="card-img"></div>
+        <h3>Projet 1 Thesis</h3>
+        <p>
+          Explore the myriad of trails through the mountaineous. Choose the
+          difficulty appropriate to your fitness level.
+        </p>
+      
+      </div>
 
 
+      <div class="card" onclick="location.href='project2.html';" style="cursor: pointer;">
+
+        <div class="card-img"></div>
+        <h3>Project 2</h3>
+        <p>
+          The goal is to reach the summit of a formation or the endpoint of a
+          usually pre-defined route without falling
+        </p>
+      </div>
+      
+      <div class="card" onclick="location.href='project3.html';" style="cursor: pointer;">
+        <div class="card-img"></div>
+        <h3>Project 3</h3>
+        <p>
+          Explore the myriad of trails through the mountaineous. Choose the
+          difficulty appropriate to your fitness level.
+        </p>
+      </div>
 
 
+      <div class="card" onclick="location.href='project4.html';" style="cursor: pointer;">
+        <div class="card-img"></div>
+        <h3>Project 4</h3>
+        <p>
+          The goal is to reach the summit of a formation or the endpoint of a
+          usually pre-defined route without falling.
+        </p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="buffer"></section>
+
+
+
+  <footer>
+    <div class="footer-text">Copyright © 2023, Victoria Popova. All Rights Reserved.</div>
+  </footer>
 
 </body>
+
 </html>

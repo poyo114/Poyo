@@ -1,8 +1,11 @@
 
 /* styles.css */
-p {
-  font-family: Arial, sans-serif;
+
+.hidden {
+  display: none;
 }
+
+
 HTML CSSResult Skip Results Iframe
 EDIT ON
 /* https://codepen.io/DuskoStamenic/pen/ZEvBKdw */
@@ -12,11 +15,50 @@ EDIT ON
   --color: rgb(63 63 63);
 }
 
+#name {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+
+}
 body {
   margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+h3,h4{
+padding-top: 10px;
+
+
 }
 
+/* Style the navigation links */
+li {
+  display: list-item;
+  margin-right: 10px;
+  padding-left: 0;
+}
+.NAVtest li{
+  color:rgb(0, 0, 0);
+  list-style-type:circle;
+  padding-bottom: 10px;
+  line-height: 2;
+
+
+
+
+}
+ul {
+  color: aqua;
+  padding-left: 0;
+
+}
+
+.containerTest {
+  left: 50%;
+  background-color: white;
+  max-width: 1500px;
+  padding: 20%;
+  text-align: left;
+}
 .parallax-container {
   display: flex;
   min-height: 100vh;
@@ -27,18 +69,18 @@ body {
   /*  this is where the magic happens:  */
   background-attachment: fixed;
 
-  background-image: url(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
+  background-image:URL(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
   background-position: center;
   background-size: cover;
   color: var(--color);
-  row-gap: 4rem;
+  row-gap: 0rem;
 
   text-align: center;
 }
 
 .buffer {
   width: 100%;
-  min-height: 60vh;
+  min-height: 30vh;
   background-color: var(--color);
 }
 
@@ -46,20 +88,26 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding: 6rem 0;
-  background-image: url(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
+  padding: 2rem 0;
+  background-image:URL(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
   gap: 1.6em;
+  
 }
 
 h1 {
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 0.5em; /* Adjust this value to change the space below the h1 element */
 }
 
 p {
-  max-width: 52ch;
-  padding: 1em;
   line-height: 1.5;
+  margin-top: 0.5em; /* Adjust this value to change the space above the p element */
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+  font-size: 17px;
+  padding-bottom: 10px;
+  line-height: 2;
+  
 }
 
 a {
@@ -75,117 +123,146 @@ a {
   text-transform: uppercase;
 }
 
-h3 {
-  margin-top: 1em;
-  font-size: 1.6rem;
-  font-weight: 700;
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  pointer-events:all;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+
 }
 
 .card {
-  display: flex;
-  max-width: 320px;
+  margin: 7%;
+  
+  max-width: 1600px;
+  width: 1000px;
+  height: 700px;
   flex-direction: column;
-  align-items: center;
-
-  padding-bottom: 1rem;
-  border-radius: 0.5em;
-
+  border-radius: 0.5em; 
+  padding: 30px;
+  border: 1px solid #ddd;
+  transition: background-color 0.5s ease, transform 0.5s;
   background-color: white;
   box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
 }
 
+
+
+
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*z-index: 1;  Ensure it covers the entire card */
+
+}
+.card:hover {
+  /* Hover effect styles */
+ /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transform: scale(1.02); 
+  /* Other hover styles... */}
+
+  
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 500px;
   border-radius: 0.3em;
   background-position: center;
   background-size: cover;
 }
 
 .card:nth-of-type(1) .card-img {
-  background-image: url(https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-image: url("cat.jpg");
 }
 
 .card:nth-of-type(2) .card-img {
-  background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+  background-image: url("cat2.jpg");
 }
 
 .card:nth-of-type(3) .card-img {
-  background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+  background-image: url("cat3.jpg");
 }
 
 .card:nth-of-type(4) .card-img {
-  background-image: url(https://images.unsplash.com/photo-1496429862132-5ab36b6ae330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80);
+  background-image: url("cat4.jpg");
 }
 
 
-/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #ffffff;
+  position: flex;
+  top: 0;
+  width: 100%;
   overflow: hidden;
+  z-index: 9999; /* Any high value to ensure nav is on top */
+  background-color: rgba(255, 255, 255, 0.5); /* Black background with 0.5 opacity */
 }
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav li {
+  float: right;
+  margin-right: 16px;
+}
+
+/* Add a specific rule for the first list item */
+.topnav li:first-child {
+  float: left;
+  border-bottom: none;
+  list-style-type: none;
+
+}
+
 
 .topnav a {
-  float: right;
-            color: #1b1b1b;
-            text-align: right;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            border-bottom: 2px solid transparent; /* Initially transparent underline */
-            transition: 0.6s; /* Slower transition */
+  color: #1d1d1d;
+  text-decoration: none;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-size: 14px;
+  border-bottom: 2px solid transparent; /* Initially transparent underline */
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  border-bottom: 2px solid #1b1b1b; /* Show the underline on hover */
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #222222;
-  color: white;
-
-}
-.card {
-  /* Your existing card styles */
-  /* Add padding, border, etc. */
-  padding: 20px;
-  border: 1px solid #ddd;
-  transition: background-color 0.5s ease, transform 0.5s/* Slower color transition */
-}
-
-.card:hover {
-  /* Hover effect styles */
-  background-color: #f9f9f9; /* Change to your desired color */
- /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  transform: scale(1.05); 
-  /* Other hover styles... */}
 
 
-  ul {
-    list-style: none;
-    padding: 0;
-}
 
-/* Style the navigation links */
-li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
+ 
 a {
     text-decoration: none; /* Remove underline by default */
     color: #333;
+    transition: text-decoration 0.5s ease;
 
 }
 
 a:hover {
     text-decoration: underline; /* Underline on hover */
-    transition:0.5s ease,
 }
 
 /* Active link style */
 #home {
     text-decoration: underline; /* Underline for active link */
+}
+.footer-text {
+  max-width: 70%;
+  color: #bebebe;
+  text-align: center; /* Aligns the text to the center */
+  letter-spacing: -.2px;
+  margin: 5px auto;
+  padding-left: 0px;
+  margin-bottom: 1em;
+  font-family: Karla, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  position: relative; /* Keeps the footer at the bottom of the page */
+  bottom: 0; /* Positions the footer at the bottom */
+  left: 0; /* Positions the footer to the left */
+  right: 0; /* Positions the footer to the right */
 }
