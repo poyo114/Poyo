@@ -20,5 +20,24 @@ function checkVisibility() {
   }
 }
 
+
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    var ul = x.getElementsByTagName("ul")[0];
+    var children = Array.from(ul.children);
+    var firstChild = children.shift(); // Remove the first child from the array
+    children.reverse().forEach(child => ul.appendChild(child));
+  } else {
+    x.className = "topnav";
+    var ul = x.getElementsByTagName("ul")[0];
+    var children = Array.from(ul.children);
+    var firstChild = children.shift(); // Remove the first child from the array
+    children.reverse().forEach(child => ul.appendChild(child));
+  }
+}

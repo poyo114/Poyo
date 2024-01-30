@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page Title</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     /* Your inline CSS styles go here */
   </style>
@@ -16,13 +17,14 @@
 
 <body>
   <header>
-    <div class="topnav">
+    <div class="topnav"id="myTopnav">
       <ul>
         <li id="name"><a href="index.html">Victoria Popova</a></li>
         <li><a href="sideprojects.html" >Side projects</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cv_1.pdf" target="_blank">Resume</a></li>
         <li><a href="index.html" id="home">Projects</a></li>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
       </ul>
@@ -50,45 +52,57 @@
       
       
       <div class="card" onclick="location.href='project1.html';" style="cursor: pointer;">
-        <div class="card-img"></div>
-        <h3>Projet 1 Thesis</h3>
-        <p>
-          Explore the myriad of trails through the mountaineous. Choose the
-          difficulty appropriate to your fitness level.
-        </p>
-      
+        <div class="card-content">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <h3>Project 1</h3>
+            <p>
+              The goal is to reach the summit of a formation or the endpoint of a
+              usually pre-defined route without falling
+            </p>
+          </div>
+        </div>
       </div>
 
 
       <div class="card" onclick="location.href='project2.html';" style="cursor: pointer;">
-
-        <div class="card-img"></div>
-        <h3>Project 2</h3>
-        <p>
-          The goal is to reach the summit of a formation or the endpoint of a
-          usually pre-defined route without falling
-        </p>
+        <div class="card-content">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <h3>Project 2</h3>
+            <p>
+              The goal is to reach the summit of a formation or the endpoint of a
+              usually pre-defined route without falling
+            </p>
+          </div>
+        </div>
       </div>
       
       <div class="card" onclick="location.href='project3.html';" style="cursor: pointer;">
-        <div class="card-img"></div>
-        <h3>Project 3</h3>
-        <p>
-          Explore the myriad of trails through the mountaineous. Choose the
-          difficulty appropriate to your fitness level.
-        </p>
+        <div class="card-content">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <h3>Project 2</h3>
+            <p>
+              The goal is to reach the summit of a formation or the endpoint of a
+              usually pre-defined route without falling
+            </p>
+          </div>
+        </div>
       </div>
-
 
       <div class="card" onclick="location.href='project4.html';" style="cursor: pointer;">
-        <div class="card-img"></div>
-        <h3>Project 4</h3>
-        <p>
-          The goal is to reach the summit of a formation or the endpoint of a
-          usually pre-defined route without falling.
-        </p>
+        <div class="card-content">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <h3>Project 2</h3>
+            <p>
+              The goal is to reach the summit of a formation or the endpoint of a
+              usually pre-defined route without falling
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
 
 
   </section>

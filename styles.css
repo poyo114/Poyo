@@ -14,12 +14,10 @@ EDIT ON
 :root {
   --color: rgb(63 63 63);
 }
-
 #name {
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-
+  transition: opacity 2s;
 }
+
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
@@ -98,6 +96,9 @@ h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5em; /* Adjust this value to change the space below the h1 element */
+  padding-right: 100px;
+  padding-bottom: 20px;
+  padding-left: 15px;
 }
 
 p {
@@ -136,22 +137,17 @@ a {
 }
 
 .card {
-  margin: 7%;
-  
-  max-width: 1600px;
-  width: 1000px;
-  height: 700px;
-  flex-direction: column;
-  border-radius: 0.5em; 
+  margin: 7% 0;
+  width: 100vw;
+  min-height: 700px; /* Adjust this value as needed */
   padding: 30px;
   border: 1px solid #ddd;
-  transition: background-color 0.5s ease, transform 0.5s;
   background-color: white;
-  box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
 }
-
-
-
+.card-content {
+  display: flex;
+  height: 100%; /* Add this line */
+}
 
 .card-link {
   position: absolute;
@@ -162,23 +158,57 @@ a {
   /*z-index: 1;  Ensure it covers the entire card */
 
 }
+
 .card:hover {
   /* Hover effect styles */
  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  transform: scale(1.02); 
-  /* Other hover styles... */}
+  /*transform: scale(1.02); 
+   Other hover styles... */
+ }
 
   
-.card-img {
-  width: 100%;
-  height: 500px;
-  border-radius: 0.3em;
-  background-position: center;
-  background-size: cover;
+
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  
 }
 
-.card:nth-of-type(1) .card-img {
-  background-image: url("cat.jpg");
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+ 
+}
+.card-img {
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('cat.jpg');
+  min-height: 500px; /* Adjust this value as needed */
+  padding: 0px 10%;
+}
+
+.card-text {
+  flex: 1;
+  padding: 60px 15%; /* Increase these values as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:nth-of-type(2) .card-img {
@@ -194,9 +224,18 @@ a {
 }
 
 
+.card:nth-child(odd) .card-content {
+  flex-direction: row;
+}
+
+.card:nth-child(even) .card-content {
+  flex-direction: row-reverse;
+}
+
 .topnav {
   position: flex;
-  top: 0;
+  flex-direction: row-reverse;
+
   width: 100%;
   overflow: hidden;
   z-index: 9999; /* Any high value to ensure nav is on top */
@@ -207,6 +246,9 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  
+  flex-direction: column-reverse;
+
 }
 
 .topnav li {
@@ -222,6 +264,10 @@ a {
 
 }
 
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
 
 .topnav a {
   color: #1d1d1d;
@@ -231,10 +277,36 @@ a {
   border-bottom: 2px solid transparent; /* Initially transparent underline */
 }
 
+@media screen and (max-width: 600px) {
+  .topnav li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  
+  .topnav.responsive a.icon {
+    right: 0;
+    top: 0;
+    display: block;
 
-
+  }
  
+
+  .topnav.responsive li:not(:first-child) {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
 a {
     text-decoration: none; /* Remove underline by default */
     color: #333;
@@ -266,3 +338,4 @@ a:hover {
   left: 0; /* Positions the footer to the left */
   right: 0; /* Positions the footer to the right */
 }
+
