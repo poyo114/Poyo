@@ -140,33 +140,30 @@ a {
 
 .card {
   margin: 7% 0;
-  width: 100vw;
-  min-height: 700px; /* Adjust this value as needed */
+  width: 100%;
+  min-height: 50vh; /* Adjust this value as needed */
   padding: 30px;
   border: 1px solid #ddd;
   background-color: white;
+  box-sizing: border-box;
+  pointer-events: none;
+
 }
 .card-content {
   display: flex;
   height: 100%; /* Add this line */
 }
 
-.card-link {
+/*.card-link {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /*z-index: 1;  Ensure it covers the entire card */
+  /*z-index: 1;  Ensure it covers the entire card 
 
-}
+}*/
 
-.card:hover {
-  /* Hover effect styles */
- /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  /*transform: scale(1.02); 
-   Other hover styles... */
- }
 
   
 
@@ -206,7 +203,7 @@ a {
 
 .card-text {
   flex: 1;
-  padding: 60px 15%; /* Increase these values as needed */
+  padding: 20px 5%; /* Increase these values as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,18 +223,24 @@ a {
 }
 
 
-.card:nth-child(odd) .card-content {
+.card:nth-child(even) .card-content {
   flex-direction: row;
 }
 
-.card:nth-child(even) .card-content {
+.card:nth-child(odd) .card-content {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 600px) {
+  .card:nth-child(even) .card-content,
+  .card:nth-child(odd) .card-content {
+    flex-direction: column;
+  }
 }
 
 .topnav {
   position: flex;
-  flex-direction: row-reverse;
-
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
   z-index: 9999; /* Any high value to ensure nav is on top */
@@ -267,11 +270,17 @@ a {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-  font-size: 30px; /* Adjust this value as needed */
-  float: right;
-  
+button {
+  padding: 10px 20px;
+  background-color: #5f0f47;
+  color: white;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  margin-top: 5%;
+  padding: 17px 30px;
+  font-size: 15px; /* Adjust this value as needed */
+
 
 }
 
@@ -283,24 +292,39 @@ a {
   border-bottom: 2px solid transparent; /* Initially transparent underline */
   
 }
+.topnav a.icon {
+  float: right;
+  display: block;
+  font-size: 30px; /* Adjust this value as needed */
 
-@media screen and (max-width: 600px) {
-  .topnav li:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;
+  .topnav li:not(:first-child) {display: none;}
+
+}
+@media screen and (min-width: 601px) {
+  .topnav a.icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 0px;
+
+
   }
   
-  
+  .topnav.responsive a {
+    padding: 15%  0px 0px 0px; 
+
+  }
   .topnav.responsive a.icon {
-    position: absolute;
+    position:absolute;
     top: 0;
     right: 0;
   }
@@ -311,17 +335,19 @@ a {
   }
 }
 
+#AICON {
+
+  padding: 0px 5% 0px 0%;
+  font-size: 30px; /* or whatever size you want the icon to be */
+}
 a {
     text-decoration: none; /* Remove underline by default */
     color: #333;
     transition: text-decoration 0.5s ease;
 
 }
-icon:hover
-{
-  text-decoration: underline; /* Underline on hover */
-
-
+.icon:hover {
+  text-decoration: none; /* No underline on hover */
 }
 
 a:hover {
