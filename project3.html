@@ -7,6 +7,8 @@
   <title>Page Title</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet"> <!-- Replace with your font link -->
+
   <style>
     /* Your inline CSS styles go here */
   </style>
@@ -19,12 +21,12 @@
   <header>
     <div class="topnav"id="myTopnav">
       <ul>
-        <li id="name"><a href="index.html">Victoria Popova</a></li>
+        <li id="name"><a href="index.html">VP</a></li>
         <li><a href="sideprojects.html">Side projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="cv_1.pdf" target="_blank">Resume</a></li>
         <li><a href="index.html" id="home">Projects</a></li>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a id="AICON" href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
       </ul>
@@ -38,12 +40,13 @@
     <h2>A case study about understanding uncertainty and UX</h2>
   </section>
 
-  <section class="buffer"></section>
 
   <section class="parallax-container parallax-container2">
 
     <div class="container">
       <div class="containerTest">
+        <div class="innerContainer">
+
 
         <h3>Case Study Overview
         </h3>
@@ -52,14 +55,18 @@
           exploring the historical site and existing solutions, an immersive user experience idea was developed that can
           show the uncertainty of the past in an interactive and educational manner.
         </p>
-        <h3>My Role and Used Tools
-        </h3>
+        <h4>My Role and Used Tools
+        </h4>
 
         <ul class="NAVtest">
           <li>Role: UX Researcher</li>
           <li>Tools: Miro, Figma</li>
 
         </ul>
+        <p class="lastP"></p>
+       
+        </div>
+        <div class="innerContainer">
 
 
 
@@ -72,7 +79,7 @@
           historic event.
         </p>
 
-        <h3>Goals</h3>
+        <h4>Goals</h4>
         <p>The main goals for this case study were to:
         </p>
 
@@ -83,7 +90,10 @@
             interaction experience and gives them a sense of payoff.</li>
           <li>Connect the experience to actual findings found during archaeological excavations.</li>
         </ul>
-
+        <p class="lastP"></p>
+        </div>
+      
+        <div class="innerContainer">
         <h3>Research and story planning
         </h3>
         <p>Since the design challenge is bound to an existing place and historic findings, it was of interest to do some
@@ -103,6 +113,11 @@
           their own. This led to the motivation to create an experience that would engage the users, and educate them
           while simultaneously giving them more freedom in their exploration journey.
         </p>
+        <div class="image-container">
+        <img src="image 2.png" alt="">
+        <img src="image 3.png" alt="">
+      </div>
+        
         <p>To diverge from a linear storyline, it was reasonable to include a story involving some interaction elements
           and objectives for the users to take part in at their own pace. To connect the story and objectives to the
           ship, the first idea was to have an archaeologist character that asks users to excavate artefacts around the
@@ -116,11 +131,14 @@
           taking place from the perspective of the ghost (that they were there and witnessed it) could also feel more
           grounded and have a stronger feeling of connection to the past than using an archaeologist from today.
         </p>
+        <p class="lastP"></p>
+      </div>
 
+      <div class="innerContainer">
         <h3>Experience Design
         </h3>
-        <p>To communicate the interactive experience idea, a storyboard that takes place at the historical museum,
-          following a family journey was created, these are the overarching steps:
+        <p>
+          To communicate the concept of an interactive experience, we developed a storyboard set in a historical museum, following a family’s journey. To make the experience more digestible, we divided the storyboard into fewer high-level steps, each having  4 images from the storyboard and their descriptions.
         </p>
         <h4>Introducing the user to the site:
         </h4>
@@ -128,6 +146,28 @@
           a Viking ghost who once lived on the ship Viking in a past life and now strives to remember his past. The
           character invites users to help him in his search for memories by searching for objects on the ground.
         </p>
+        <div class="image-container2">
+          <div class="image-item">
+            <img src="1.png" alt="">
+            <p>1. Family visits the museum, holding the map.
+            </p>
+          </div>
+          <div class="image-item">
+            <img src="2.png" alt="">
+            <p>2. The family looks at the map and points to the beginning of the experience.
+            </p>
+          </div>
+          <div class="image-item">
+            <img src="3.png" alt="">
+            <p>3. The family meets Olaf the viking ghost outside the sign “till 850”. Olaf asks them for help to revive his memories by finding artefacts that he has lost. 
+              </p>
+          </div>
+          <div class="image-item">
+            <img src="4.png" alt="">
+            <p>4.The family agrees to help and follows Olaf to the tools where Olaf explains how they work.</p>
+          </div>
+        </div>
+
 
         <h4>Familiarizing users with the unknown:
         </h4>
@@ -135,31 +175,59 @@
           users get involved in finding archaeological objects, also indulging in richer conversation with the
           character, and more.
         </p>
+        <div class="image-container2">
+
+          <div class="image-item">
+            <img src="5.png" alt="">
+            <p>5. The family is going to a guided zone as a part of an excavation tutorial (zones are spotlighted) </p>
+          </div>
+          <div class="image-item">
+            <img src="6.png" alt="">
+            <p>6. Family works together to excavate artefacts on a digital screen, helping Olaf reviving his memories</p>
+          </div>
+          <div class="image-item">
+            <img src="7.png" alt="">
+            <p>7. When an artefact is found, it is highligted and added to the collection log.</p>
+          </div>
+          <div class="image-item">
+            <img src="8.png" alt="">
+            <p>8. Olaf appears and starts talking about the lost memories, providing more information on objects the family has excavated. </p>
+          </div>
+        </div>
+
         <h4>Strengthening user associations:
         </h4>
         <p>In the final stages, the interactions are aimed to invoke sentiments in users and strengthen their connection
           with the history of the ship.
         </p>
-        <p>Here is the whole storyboard, describing each frame:
-        </p>
-        <p>ADD ALL IMAGES + text
-          Outline for the storyboard:
-          Family in the museum (They can see the sign “Till 850”)
-          Holding hands with map (Pointing hand)
-          Family is meeting Olaf(generated name) in zone “till 850”
-          Welcome screen (no tools)
-          Pointing to the zone with tools (Pointing hand)
-          Family is following AI for tools
-          The family is going to a guided zone (zones are spotlighted)
-          Process of finding object
-          Add the found object to the log
-          AI starts conversation
-          Everything was found in this era (You see the complete level with all objects they found)
-          AI saying something about the era
-          The family looks happy and moves towards the next room
-          Entering the ship room with a top view, sees all the things collected there, happy days.
-        </p>
+    
 
+        <div class="image-container2">
+
+          <div class="image-item">
+            <img src="9.png" alt="">
+            <p>9. After some time, the family unlocks all the hidden artefacts in this specific era, seeing the completed collection log.</p>
+          </div>
+          <div class="image-item">
+            <img src="10g.png" alt="">
+            <p>10. Olaf appears again and talks about the completed era. Olaf wants to take the family to a new area, providing new instructions.</p>
+          </div>
+          <div class="image-item">
+            <img src="11g.png" alt="">
+            <p>11. Family looks happy and moves towards the next room. </p>
+          </div>
+          <div class="image-item">
+            <img src="12.png" alt="">
+            <p>12. The family enters the room with the ship and sees all the artefacts (their locations and connection to Olaf's memories) they collected during their excavation. </p>
+          </div>
+        </div>
+
+        <p class="lastP"></p>
+
+      </div>
+
+
+<div class="innerContainer">
         <h3>Conclusion/Reflection:
         </h3>
         <p>Creating an engaging and informative experience while introducing users to unfamiliar, uncertain, and
@@ -167,7 +235,9 @@
           follow. They should also be able to evoke emotions within users before revealing the final product and
           outcomes. To achieve this it’s important to keep the user’s perspective in mind and tailor the experience to
           their needs. </p>
+          <p class="lastP"></p>
 
+</div>
 
       </div>
 

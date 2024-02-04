@@ -14,12 +14,15 @@ HTML CSSResult Skip Results Iframe EDIT ON
 }
 
 #name {
-  transition: opacity 2s;
-
 }
 
 #name a {
-  padding: 20px;
+  padding-left: 40px;
+  font-family: 'Vibur', cursive; /* Replace 'Vibur' with your font name */
+  font-size: 20px;
+  text-decoration: none;
+
+
 }
 
 body {
@@ -46,10 +49,12 @@ li {
   list-style-type: circle;
   padding-bottom: 10px;
   line-height: 2;
+}
 
-
-
-
+hr {
+  border: none;
+  border-top: 1px solid black; /* Change 'black' to any color you want */
+  width: 100%; /* This will make the line span the full width of its parent */
 }
 
 ul {
@@ -60,12 +65,98 @@ ul {
 
 .containerTest {
   width: 100%; /* This will make the container span the entire width of its parent */
-  background-color: white;
-  max-width: 1500px;
-  padding: 20%;
+  background-color: rgb(255, 255, 255);
   text-align: left;
-  align-items: center;
 }
+
+
+.containerTest .innerContainer:nth-child(odd) {
+  background-color: #fafafa; /* Change this to the color you want for odd-numbered innerContainers */
+}
+
+.containerTest .innerContainer:nth-child(even) {
+  background-color: #ffffff; /* Change this to the color you want for even-numbered innerContainers */
+  padding: top 20px;
+
+}
+
+.innerContainer .smaller-image {
+  width: 30%; /* Adjust this value to change the width of the images */
+  height: auto; /* This will maintain the aspect ratio of the images */
+}
+.innerContainer .smaller-image2 {
+  width: 60%; /* Adjust this value to change the width of the images */
+  height: auto; /* This will maintain the aspect ratio of the images */
+}
+
+.innerContainer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25%;
+  padding-right: 25%;
+  
+
+}
+
+.innerContainer p.lastP{
+  padding-bottom: 60px;
+}
+.innerContainer h4
+{
+  padding: 0px;
+  margin: 0px;
+}
+.innerContainer img {
+  width: 80%; /* Make the images take up 80% of the width of the .innerContainer */
+  height: auto; /* This will maintain the aspect ratio of the images */
+  padding: 50px;
+  padding-bottom: 70px;
+}
+
+.innerContainer p {
+  align-items: left; /* Vertically center the text and the image */
+}
+
+.innerContainer h3 {
+padding-top: 80px;
+}
+
+.innerContainer p img {
+  margin-left: 20px; /* Add some space between the text and the image */
+  min-width: 250px; /* Set a minimum width for the images */
+  min-height: 200px; /* Set a minimum height for the images */
+  width: 100%; /* Make the images take up the full width of the p element */
+  height: auto; /* This will maintain the aspect ratio of the images */
+  object-fit: cover; /* This will crop the images to fit the dimensions */
+  margin-left: 20px; /* Add some space between the text and the image */
+
+}
+
+.innerContainer p.textFirst {
+  display: flex; /* Make the p element a flex container */
+  flex-direction: row; /* Make the text appear before the image */
+  align-items: center; /* Vertically center the text and the image */
+}
+
+.innerContainer p.textFirst img {
+  margin-left: 40px; /* Increase the space between the text and the image */
+}
+
+.innerContainer p.imageFirst {
+  display: flex; /* Make the p element a flex container */
+  flex-direction: row-reverse; /* Make the image appear before the text */
+  align-items: center; /* Vertically center the text and the image */
+}
+
+.innerContainer p.imageFirst img {
+  margin-right: 40px; /* Increase the space between the text and the image */
+}
+
+.innerContainer div {
+  width: 100%; /* This will make the div span the entire width of its parent */
+  padding: 20px 0; /* Top and bottom padding is 20px, left and right padding is 0 */
+}
+
 
 .parallax-container {
   display: flex;
@@ -76,6 +167,8 @@ ul {
 
   /*  this is where the magic happens:  */
   background-attachment: fixed;
+
+
 
   background-image: URL(https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80);
   background-position: center;
@@ -103,7 +196,7 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   background-image: URL(https://images.unsplash.com/photo-1585424536945-26663ea69d52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
   gap: 1.6em;
 
@@ -165,19 +258,20 @@ a {
 
 
 .card {
-  margin: 7% 0;
+  margin: 4% 0;
   width: 100%;
-  min-height: 50vh;
+  min-height: 65vh;
   /* Adjust this value as needed */
-  padding: 30px;
+  padding: 30px 30px 110px; /* Increased bottom padding */
   border: 1px solid #ddd;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
   pointer-events: none;
 
 }
 
 .card-content {
+  padding-top: 50px;
   display: flex;
   height: 100%;
   /* Add this line */
@@ -209,11 +303,7 @@ a {
 
 }
 
-#header {
-  text-align: center;
-  padding: 0;
-  margin-bottom: 0;
-}
+
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
   h1 {
@@ -230,12 +320,13 @@ a {
 .card-img {
   flex: 1;
   background-position: center;
-  background-size: cover;
+  background-size: 60%; /* This will make the image 50% of its original size */
   background-repeat: no-repeat;
-  background-image: url('cat4.jpg');
+  background-image: url('casestudy2_img.png');
   min-height: 400px;
   /* Adjust this value as needed */
   padding: 0px 10%;
+  
 }
 
 .card-text {
@@ -249,15 +340,19 @@ a {
 }
 
 .card:nth-of-type(2) .card-img {
-  background-image: url("cat2.jpg");
+  background-image: url("thesisimg.png");
+  background-size: 60%; /* Adjust this value as needed */
+
 }
 
 .card:nth-of-type(3) .card-img {
-  background-image: url("cat3.jpg");
+  background-image: url("A2\ Poster.png");
+  background-size: 41%; /* Adjust this value as needed */
+
 }
 
 .card:nth-of-type(4) .card-img {
-  background-image: url("cat4.jpg");
+  background-image: url("pawse2.png");
 }
 
 
@@ -314,18 +409,14 @@ a {
 
 /* Hide the link that should open and close the topnav on small screens */
 button {
-  padding: 10px 20px;
-  background-color: #5f0f47;
-  color: white;
-  border: none;
+  padding: 20px 20px;
+  background-color: transparent; /* No fill */
+  color: black; /* Text color */
+  border: 1px solid black; /* Black border */
   cursor: pointer;
   pointer-events: auto;
-  margin-top: 5%;
-  padding: 17px 30px;
+  margin-top: 7%;
   font-size: 15px;
-  /* Adjust this value as needed */
-
-
 }
 
 .topnav a {
@@ -404,6 +495,29 @@ button {
   .topnav.responsive li:nth-child(2) {
     padding: 60px 0px 0px 0px;
 }
+
+.card-img {
+  background-size: 100%; /* This will make the image cover the full width of its container */
+  /* Other properties... */
+margin: 0;}
+
+.card-text p.justify-text {
+  text-align: justify;
+}
+.container.responsive{
+  padding: 0;
+  /* Other properties... */margin: 0%;
+}
+
+.card:nth-of-type(2) .card-img {
+  background-size: 100%; /* Adjust this value as needed */
+
+}
+
+.card:nth-of-type(3) .card-img {
+  background-size: 100%; /* Adjust this value as needed */
+
+}
 }
 #AICON {
 
@@ -414,6 +528,8 @@ button {
 
 #CStitle {
   position: center;
+  padding-bottom: 30px;
+  font-size: 30px;
 }
 
 
@@ -428,13 +544,7 @@ a:hover {
   /* Underline on hover */
 }
 
-.alternating-section:nth-child(odd) {
-  background-color: white;
-}
 
-.alternating-section:nth-child(even) {
-  background-color: grey;
-}
 
 /* Active link style */
 #home {
@@ -462,4 +572,85 @@ a:hover {
   /* Positions the footer to the left */
   right: 0;
   /* Positions the footer to the right */
+}
+
+
+#CaseStudy {
+  text-align: left !important;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  color: #6b6b6b;
+}
+
+.card-text p {
+  text-align: left;
+  line-height: 1.5;
+  padding-right: 70px;
+
+}
+.card-text H3 {
+  text-align: left;
+  line-height: 2;
+
+}
+
+.Introduction h3,
+.Introduction h1,
+.Introduction p {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#header {
+font-size: 36px;
+}
+
+
+
+.carousel {
+  position: relative;
+}
+.carousel__image {
+  display: none;
+  width: 100%;
+  margin: auto;
+}
+.carousel__image:first-child {
+  display: block;
+}
+.w3-button.w3-display-left {
+  position: absolute;
+  top: 50%;
+  left: -40px; /* adjust this value as needed */
+  transform: translateY(-50%);
+}
+
+.w3-button.w3-display-right {
+  position: absolute;
+  top: 50%;
+  right: -40px; /* adjust this value as needed */
+  transform: translateY(-50%);
+}
+
+.image-container {
+  display: flex;
+}
+.image-container img {
+  padding: 6px;
+}
+.image-container2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* adjust as needed */
+  padding: 0;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  padding:0
 }
