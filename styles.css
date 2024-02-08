@@ -83,7 +83,7 @@ padding-top: 0;}
 }
 .case-study-intro p {
   text-align: left;
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 20px;
 
 }
@@ -148,7 +148,11 @@ hr {
   margin-right: auto;
   padding-left: 20%;
   padding-right: 20%;
-  
+  overflow-x: hidden;
+  justify-content: center; /* centers children horizontally */
+  align-items: center; /* centers children vertically */
+
+
 
 }
 
@@ -164,8 +168,8 @@ hr {
 .innerContainer img {
   width: 80%; /* Make the images take up 80% of the width of the .innerContainer */
   height: auto; /* This will maintain the aspect ratio of the images */
-  padding: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
+  padding-top: 30px;
 }
 
 .innerContainer p {
@@ -607,9 +611,21 @@ padding-right: 10px;
 padding-top: 0;
   }
   
+  .innerContainer h3 {
+    padding-top: 80px;
+    font-size: 1.5em; /* Makes the font size of h3 and h4 tags within .innercontainer larger */
+    padding-bottom: 10px;
+    
+    }
 
+  .intro-text h2 {
+    font-size: 1.6em; /* Adjust as needed */
 
-
+  }
+  .case-study-intro p {
+    font-size: 18px;
+    
+  }
 
 
 
@@ -823,7 +839,10 @@ line-height: 1.2;
   display: flex; /* enables flex layout */
   justify-content: center; /* centers children horizontally */
   align-items: center; /* centers children vertically */
-  height: 65vh; /* takes up the full height of the viewport */
+  max-width: 70%;
+  padding-bottom: 0;
+margin-bottom: 0;
+
 }
 
 .carousel {
@@ -831,40 +850,69 @@ line-height: 1.2;
   margin: 20px auto; /* add vertical margin and center the carousel horizontally */
   display: block;
   overflow: hidden;
-  width: 70%; /* adjust this value to make the carousel smaller or larger */
-  max-width: 100%; /* ensures the carousel doesn't overflow its container */
+
+
+
 }
 
 .carousel__image {
-  width: 50%; /* adjust this value to make the images smaller */
-  height: auto; /* maintain the aspect ratio of the images */
-  display: block; /* ensures the images are block elements */
+  height: auto;  display: block; /* ensures the images are block elements */
   margin: 0 auto; /* centers the images horizontally */
   object-fit: cover; /* ensures the image covers its content box without stretching */
+  padding: 0 !important;
+
 
 }
 
 .w3-button {
   color: rgb(56, 56, 56); /* change the text color to black */
-  background-color: #fff; /* change the background color to white */
   border: 1px solid rgb(56, 56, 56); /* add a thin black border */
   padding: 10px 20px; /* add some padding */
   position: relative; /* position the buttons relatively */
   z-index: 2; /* ensure the buttons are above the images */
   margin: 10px; /* add some margin around the buttons */
   margin-top: 0;
+  font-weight: lighter; /* makes the font thinner */
+
 }
 
 .buttons-container {
   display: flex; /* enables flex layout */
   justify-content: center; /* centers children horizontally */
   align-items: center; /* centers children vertically */
+  margin-top: 0;
 }
 @media (max-width: 600px) {
   .carousel__image {
     width: 100%; /* make the images cover the screen */
     height: auto; /* make the images take up the full height of the viewport */
   }
+  #buttonUP {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
+  #buttonUP {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    border: 1.5px solid#c4c4c4;
+    border-radius: 50%;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    line-height: 50px; /* add this to vertically center the caret */
+    font-size: 1.2em; /* add this to adjust the size of the caret */
+    color: #c4c4c4; /* add this to set the color of the caret */
+    font-weight: lighter;
+  }
+
+
+
 }
 
 /* .button-container {
@@ -939,6 +987,47 @@ line-height: 1.2;
 
 .next-case-study a {
   text-decoration: none; /* Removes the underline from the link */
-  color: rgb(56, 56, 56); /* Makes the link the same color as the text */
-  font-size: 1.2em; /* Makes the link a bit larger */
+  color: rgb(108, 108, 108); /* Makes the link the same color as the text */
+  font-size: 1.1em; /* Makes the link a bit larger */
+}
+
+#buttonUP {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  text-align: center;
+  border: 1.5px solid#c4c4c4;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 0;
+  line-height: 50px; /* add this to vertically center the caret */
+  font-size: 1.2em; /* add this to adjust the size of the caret */
+  color: #c4c4c4; /* add this to set the color of the caret */
+  font-weight: lighter;
+}
+
+#buttonUP:hover {
+  cursor: pointer;
+  background-color:#e6e6e6;
+  text-decoration: none; /* add this */
+
+  
+}
+
+#buttonUP:active {
+  background-color: #e6e6e6;
+}
+
+#buttonUP.show {
+  opacity: 1;
+  visibility: visible;
 }
