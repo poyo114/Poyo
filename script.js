@@ -1,3 +1,17 @@
+window.addEventListener('scroll', function() {
+  var elements = document.querySelectorAll('.card-img, .card-text, #CStitle');
+  var window_height = window.innerHeight;
+
+  elements.forEach(function(element) {
+    var element_top = element.getBoundingClientRect().top;
+
+    if (element_top < window_height) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+  });
+});
 // console.log("JavaScript file is connected!");
 
 // function checkVisibility() {
@@ -25,6 +39,13 @@
 // window.addEventListener('load', checkVisibility);
 
 
+// window.addEventListener('scroll', function() {
+//   var bird = document.getElementById('bird');
+//   bird.style.left = window.scrollY + 'px';
+// });
+
+
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -45,7 +66,10 @@ function myFunction() {
 
 
 var slideIndex = 1;
-showDivs(slideIndex);
+
+window.onload = function() {
+  showDivs(slideIndex);
+}
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
@@ -54,8 +78,9 @@ function plusDivs(n) {
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("carousel__image");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
+  slideIndex = n; // Update slideIndex here
+  if (slideIndex > x.length) {slideIndex = 1}
+  if (slideIndex < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
