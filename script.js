@@ -5,7 +5,9 @@ $(document).ready(function() {
     if ($(window).scrollTop() > 300) {
       btn.addClass('show');
     } else {
-      btn.removeClass('show');
+      if ($(window).width() > 600) {
+        btn.removeClass('show');
+      }
     }
   });
 
@@ -14,7 +16,6 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop:0}, '300');
   });
 });
-
 
 
 window.addEventListener('scroll', function() {

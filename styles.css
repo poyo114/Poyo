@@ -403,6 +403,8 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+
 .card:nth-of-type(2) .card-img {
   background-image: url("thesisimg.png");
 }
@@ -773,6 +775,7 @@ a:hover {
   /* Positions the footer to the left */
   right: 0;
   /* Positions the footer to the right */
+  align-items: center;
 }
 
 
@@ -830,6 +833,26 @@ a:hover {
   animation: slideInFromLeft 1s ease-out;
 }
 
+@keyframes intro-text {
+  0% {
+    transform: translateY(-2%);
+    opacity: 0;
+
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+
+.case-study-intro p, img {
+  animation: intro-text 0.7s forwards;
+}
+.intro-text {
+  animation: intro-text 0.7s forwards;
+} 
+
 #header {
 font-size: 30px;
 padding-top: 0;
@@ -882,38 +905,7 @@ margin-bottom: 0;
   align-items: center; /* centers children vertically */
   margin-top: 0;
 }
-@media (max-width: 600px) {
-  .carousel__image {
-    width: 100%; /* make the images cover the screen */
-    height: auto; /* make the images take up the full height of the viewport */
-  }
-  #buttonUP {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-  }
 
-  #buttonUP {
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    text-align: center;
-    border: 1.5px solid#c4c4c4;
-    border-radius: 50%;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s, 
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    line-height: 50px; /* add this to vertically center the caret */
-    font-size: 1.2em; /* add this to adjust the size of the caret */
-    color: #c4c4c4; /* add this to set the color of the caret */
-    font-weight: lighter;
-  }
-
-
-
-}
 
 /* .button-container {
   display: flex;
@@ -997,7 +989,7 @@ margin-bottom: 0;
   height: 50px;
   background-color: transparent;
   text-align: center;
-  border: 1.5px solid#c4c4c4;
+  border: 1.5px solid #dbdbdb;
   border-radius: 50%;
   position: fixed;
   bottom: 30px;
@@ -1011,23 +1003,43 @@ margin-bottom: 0;
   padding: 0;
   line-height: 50px; /* add this to vertically center the caret */
   font-size: 1.2em; /* add this to adjust the size of the caret */
-  color: #c4c4c4; /* add this to set the color of the caret */
+  color: #dbdbdb; /* add this to set the color of the caret */
   font-weight: lighter;
 }
 
 #buttonUP:hover {
   cursor: pointer;
-  background-color:#e6e6e6;
+  /* background-color:rgb(229, 232, 240); */
   text-decoration: none; /* add this */
+  border: 1.5px solid rgb(229, 232, 240);
+  color: rgb(229, 232, 240);
 
   
 }
-
+/* 
 #buttonUP:active {
   background-color: #e6e6e6;
-}
+} */
 
 #buttonUP.show {
   opacity: 1;
   visibility: visible;
+
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  #buttonUP {
+position: sticky;
+margin-bottom: 30px;
+}
+
+}
+
+
