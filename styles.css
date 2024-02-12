@@ -846,7 +846,7 @@ a:hover {
   }
 }
 
-.case-study-intro p, img {
+.case-study-intro p,.case-study-intro img {
   animation: intro-text 0.7s forwards;
 }
 .intro-text {
