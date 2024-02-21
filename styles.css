@@ -73,7 +73,7 @@ padding-top: 0;}
   padding:0;
 }
 
-.intro-text h2 {
+.intro-text h2, .intro-text2 h2 {
   font-size: 3.3em; /* Adjust as needed */
   font-weight: lighter; /* Adjust as needed */
   text-align: left;
@@ -81,7 +81,12 @@ padding-top: 0;}
   margin: 0px;
   margin-top: 20px;
 }
-.case-study-intro p {
+.intro-text2 h2
+{
+padding-top: 1.5em;
+
+}
+.case-study-intro p, .case-study-intro2 p{
   text-align: left;
   font-size: 22px;
   margin-top: 20px;
@@ -335,10 +340,11 @@ a {
   width: 100%;
   min-height: 65vh; /* This will make the card at least as tall as the viewport */
   /* Adjust this value as needed */
-  padding: 30px 30px 110px;
+  padding: 30px 10% 110px;
   background-color: rgb(255, 255, 255,0.8);
   box-sizing: border-box;
   pointer-events: none;
+  
 
 }
 
@@ -358,13 +364,28 @@ a {
   background-image: url('casestudy2_img.png');
   min-height: 400px;
   /* Adjust this value as needed */
-  padding: 0px 10%;
+  padding: 10px 10%;
+
   
+}
+
+.card-img2
+{
+
+  flex: 1;
+  background-position: center;
+  background-size: contain; /* This will make the image 50% of its original size */
+  background-repeat: no-repeat;
+  background-image: url('/images/babushka\ concept\ art.jpg');
+  min-height: 400px;
+  padding: 10% 10%;
+
+  /* Adjust this value as needed */
 }
 
 .card-text {
   flex: 1;
-  padding: 20px 5%;
+  padding: 10px 5%;
   /* Increase these values as needed */
   display: flex;
   flex-direction: column;
@@ -372,8 +393,23 @@ a {
   align-items: center;
   font-weight: normal;
 }
+
+.card-text2{
+  flex: 1;
+  padding-left:50px;
+  /* Increase these values as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+}
+
+
 .card-text h3,
-.card-text h4 {
+.card-text h4,
+.card-text2 h3,
+.card-text2 h4 {
   font-weight: normal; /* or use numeric values like 400 */
   
 }
@@ -1043,3 +1079,76 @@ margin-bottom: 30px;
 }
 
 
+.tagDef, .tagBlue, .tagRed, .tagGreen, .tagYellow {
+  display: inline-block;
+  padding: 4px 7px;
+  background-color: #e3c2c2; /* change this to your desired color */
+  border-radius: 20px; /* this makes the tag oval-shaped */
+  color: #333333; /* change this to your desired text color */
+  font-size: 14px;
+}
+.tagBlue{
+  background-color: #b6dbdb; /* change this to your desired color */
+}
+
+.tagRed{
+  background-color: #dbafaf; /* change this to your desired color */
+}
+.tagGreen{
+  background-color: #b6dfae; /* change this to your desired color */
+}
+.tagYellow{
+  background-color: #ceabdc; /* change this to your desired color */
+}
+
+.image-set {
+  display: flex;
+}
+
+.image-set img {
+  width: 100%; /* make the image full width */
+  height: auto; /* maintain aspect ratio */
+  object-fit: contain; /* resize the image to fit within the container, maintaining its aspect ratio */
+}
+
+#full-width {
+  width: 100%;
+  height: auto; /* maintain aspect ratio */
+  object-fit: contain; /* resize the image to fit within the container, maintaining its aspect ratio */
+  padding-top:0;
+}
+#half-width {
+  width: 50%; /* make the image half the width of its container */
+  height: auto; /* maintain aspect ratio */
+  object-fit: contain; /* resize the image to fit within the container, maintaining its aspect ratio */
+  padding-top:0;
+
+}
+#myVideo {
+  width: 100%; /* make the video fit its container */
+  height: auto; /* maintain aspect ratio */
+}
+
+#myVideo2 {
+  width: 50%; /* make the video half the width of its container */
+  height: auto; /* maintain aspect ratio */
+}
+#pixelArt {
+  width: 200px; /* adjust this to scale the image */
+  height: auto; /* maintain aspect ratio */
+  image-rendering: pixelated; 
+  padding-top:0;
+
+}
+
+.image-container3 {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; /* add space between the images */
+
+}
+#uniqueDesc {
+  font-size: 1.1em; /* make the font a bit bigger */
+margin-bottom: 0;
+  font-weight:300; /* make the font heavier */
+}
