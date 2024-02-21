@@ -1143,10 +1143,18 @@ margin-bottom: 30px;
 
 .image-container3 {
   display: flex;
-  justify-content: center; 
   gap: 20px; /* add space between the images */
+  padding: 20%; /* add space around the images */
+  height: auto; /* maintain aspect ratio */
 
 }
+.image-container3 img {
+
+  width: 400px; /* adjust this to scale the image */
+
+}
+
+
 #uniqueDesc {
   font-size: 1.1em; /* make the font a bit bigger */
 margin-bottom: 0;
